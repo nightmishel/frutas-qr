@@ -1,0 +1,98 @@
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naranja QR</title>
+
+    <!-- Librería para generar QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .tarjeta {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px #bbb;
+        }
+
+        .fruta {
+            font-size: 100px;
+        }
+
+        h1 {
+            color: #e65100;
+        }
+
+        #qr {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <div class="fruta">🍊</div>
+
+        <h1>Naranja</h1>
+
+        <p>Escanea este código QR 📱</p>
+
+        <div id="qr"></div>
+
+    </div>
+
+
+    <script>
+
+        /*
+        Por ahora el QR apunta a fruta.html.
+
+        Esto funcionará cuando la página esté
+        disponible para el celular.
+        */
+
+        let direccion = "fruta.html";
+
+        new QRCode(
+            document.getElementById("qr"),
+            {
+                text: direccion,
+                width: 200,
+                height: 200
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
+```
+
